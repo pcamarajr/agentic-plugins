@@ -1,0 +1,50 @@
+{
+  "scope": "header-framework-migration",
+  "legacyUrl": "https://staging.example.com/products/widget-001",
+  "newUrl": "http://localhost:3000/products/widget-001",
+  "ignoreHTTPSErrors": true,
+  "viewports": [
+    { "name": "mobile", "width": 375, "height": 900 },
+    { "name": "tablet", "width": 768, "height": 900 },
+    { "name": "desktop", "width": 1024, "height": 900 }
+  ],
+  "thresholds": {
+    "maxDiffPixelRatio": 0.01,
+    "maxDiffPixels": 500
+  },
+  "maskSelectors": [".trustpilot-widget", "iframe[src*='youtube']"],
+  "removeSelectors": ["#onetrust-banner-sdk", "[id^='cookieyes']", ".intercom-launcher"],
+  "stripFixedAndSticky": true,
+  "scrollPolicy": "bottom",
+  "targets": [
+    {
+      "id": "site-header",
+      "selector": "[data-testid=\"site-header\"]",
+      "cssRoots": ["src/components/Header/"],
+      "states": [
+        { "name": "default", "actions": [] },
+        {
+          "name": "mobile-menu-open",
+          "viewports": ["mobile"],
+          "actions": [
+            { "type": "click", "selector": "[data-testid=\"site-header-menu-toggle\"]" },
+            { "type": "wait", "ms": 350 }
+          ],
+          "cropSelector": "[data-testid=\"site-header-drawer\"]"
+        }
+      ]
+    },
+    {
+      "id": "product-gallery",
+      "selector": "[data-testid=\"product-gallery\"]",
+      "cssRoots": ["src/components/ProductGallery/"],
+      "states": [{ "name": "default", "actions": [] }]
+    },
+    {
+      "id": "product-info",
+      "selector": "[data-testid=\"product-info\"]",
+      "cssRoots": ["src/components/ProductInfo/"],
+      "states": [{ "name": "default", "actions": [] }]
+    }
+  ]
+}

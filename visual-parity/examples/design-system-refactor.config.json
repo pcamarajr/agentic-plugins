@@ -1,0 +1,47 @@
+{
+  "scope": "card-tokens-refactor",
+  "legacyUrl": "http://localhost:3000/components/card?branch=main",
+  "newUrl": "http://localhost:3000/components/card?branch=refactor-tokens",
+  "ignoreHTTPSErrors": true,
+  "viewports": [
+    { "name": "mobile", "width": 375, "height": 900 },
+    { "name": "desktop", "width": 1024, "height": 900 }
+  ],
+  "thresholds": {
+    "maxDiffPixelRatio": 0.005,
+    "maxDiffPixels": 250
+  },
+  "maskSelectors": [],
+  "removeSelectors": [],
+  "stripFixedAndSticky": true,
+  "scrollPolicy": "top",
+  "targets": [
+    {
+      "id": "card-default",
+      "selector": "[data-testid=\"card-default\"]",
+      "cssRoots": ["src/components/Card/"],
+      "states": [{ "name": "default", "actions": [] }]
+    },
+    {
+      "id": "card-with-image",
+      "selector": "[data-testid=\"card-with-image\"]",
+      "cssRoots": ["src/components/Card/"],
+      "states": [{ "name": "default", "actions": [] }]
+    },
+    {
+      "id": "card-actionable",
+      "selector": "[data-testid=\"card-actionable\"]",
+      "cssRoots": ["src/components/Card/"],
+      "states": [
+        { "name": "default", "actions": [] },
+        {
+          "name": "hovered",
+          "actions": [
+            { "type": "hover", "selector": "[data-testid=\"card-actionable\"]" },
+            { "type": "wait", "ms": 200 }
+          ]
+        }
+      ]
+    }
+  ]
+}

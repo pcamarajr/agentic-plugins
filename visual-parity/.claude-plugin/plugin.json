@@ -1,0 +1,19 @@
+{
+  "name": "visual-parity",
+  "description": "Visual parity loop for UI migrations. Compare a legacy reference URL with a new tree, then iterate CSS until they match human-eye.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Pedro Camara Junior",
+    "email": "eu@pcamarajr.dev"
+  },
+  "homepage": "https://github.com/pcamarajr/agentic-plugins/tree/main/visual-parity",
+  "repository": "https://github.com/pcamarajr/agentic-plugins",
+  "license": "MIT",
+  "keywords": [
+    "visual-regression",
+    "playwright",
+    "ui-migration",
+    "parity",
+    "pixelmatch"
+  ]
+}

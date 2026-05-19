@@ -1,0 +1,23 @@
+{
+  "name": "agentic-plugins",
+  "description": "Pedro Camara Junior's Claude Code plugins — agentic developer workflows.",
+  "owner": {
+    "name": "Pedro Camara Junior",
+    "email": "eu@pcamarajr.dev"
+  },
+  "plugins": [
+    {
+      "name": "visual-parity",
+      "source": "./visual-parity",
+      "description": "Visual parity loop for UI migrations. Compare a legacy reference URL with a new tree, then iterate CSS until they match human-eye.",
+      "category": "developer-tools",
+      "keywords": [
+        "visual-regression",
+        "playwright",
+        "ui-migration",
+        "parity",
+        "pixelmatch"
+      ]
+    }
+  ]
+}

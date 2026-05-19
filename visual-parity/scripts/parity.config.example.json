@@ -1,0 +1,27 @@
+{
+  "scope": "header",
+  "legacyUrl": "https://legacy.example.com/home",
+  "newUrl": "http://localhost:3000/home",
+  "ignoreHTTPSErrors": true,
+  "viewports": [
+    { "name": "mobile", "width": 375, "height": 900 },
+    { "name": "tablet", "width": 768, "height": 900 },
+    { "name": "desktop", "width": 1024, "height": 900 }
+  ],
+  "thresholds": {
+    "maxDiffPixelRatio": 0.01,
+    "maxDiffPixels": 500
+  },
+  "maskSelectors": [],
+  "removeSelectors": [],
+  "stripFixedAndSticky": true,
+  "scrollPolicy": "bottom",
+  "targets": [
+    {
+      "id": "header-root",
+      "selector": "[data-testid=\"site-header\"]",
+      "cssRoots": ["src/components/Header/"],
+      "states": [{ "name": "default", "actions": [] }]
+    }
+  ]
+}
