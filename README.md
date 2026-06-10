@@ -20,6 +20,7 @@ claude /plugin install visual-parity@agentic-plugins
 | Plugin | What it does |
 |---|---|
 | [`visual-parity`](./visual-parity) | Visual parity loop for UI migrations. Compares a legacy reference URL with a new URL, captures cropped screenshots, diffs them with pixelmatch, then iterates CSS in your project until the renders match human-eye. |
+| [`debug`](./debug) | Hypothesis-driven runtime debugging, Cursor Debug Mode style. Generates competing root-cause hypotheses, instruments your code with self-cleaning log statements that stream to a local collector, captures evidence while you (or the agent) reproduce the bug, applies an evidence-backed fix, and asks you for the verdict. |
 
 ## Versioning
 

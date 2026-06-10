@@ -18,6 +18,20 @@
         "parity",
         "pixelmatch"
       ]
+    },
+    {
+      "name": "debug",
+      "source": "./debug",
+      "description": "Hypothesis-driven runtime debugging (Cursor Debug Mode style). Instruments your code with self-cleaning log statements, captures runtime evidence through a local collector while the bug is reproduced, applies an evidence-backed fix, and asks you to verify.",
+      "category": "developer-tools",
+      "keywords": [
+        "debugging",
+        "runtime",
+        "instrumentation",
+        "hypothesis-driven",
+        "debug-mode",
+        "ndjson"
+      ]
     }
   ]
 }
